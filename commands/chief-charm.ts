@@ -62,6 +62,11 @@ const chiefCharm: Command = {
         const start = charmLevels.find((l) => l.level == from);
         const end = charmLevels.find((l) => l.level == to);
 
+        if (amount > 18 ) {
+            await interaction.editReply({ content: 'cant calculate, The max of charms is 18'});
+            return;
+        }
+
         if (!start || !end) {
             await interaction.editReply({ content: 'Level not founds.' });
             return;
