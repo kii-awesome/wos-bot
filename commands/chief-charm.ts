@@ -85,7 +85,7 @@ const chiefCharm: Command = {
         }
 
         for (const lvl of range) {
-            entry.charmGuides += lvl.charmDesign;
+            entry.charmGuides += lvl.charmGuides;
             entry.charmDesign += lvl.charmDesign;
             entry.jewelScrets += lvl.jewelScrets;
         }
